@@ -1,11 +1,13 @@
 import { Country, GetCountries } from '@/types';
 import { gql, useQuery } from '@apollo/client';
 import jsonCountries from '../data/countries.json';
-import Maps from './Maps';
 import React, { useState } from 'react';
 import SearchCountries from './SearchCountries';
 import { ClipLoader } from 'react-spinners';
+import dynamic from 'next/dynamic';
 
+
+const Maps = dynamic(() => import('./Maps'), { ssr: false });
 
 const ListCountries = () => {
 

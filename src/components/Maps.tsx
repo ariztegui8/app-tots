@@ -1,3 +1,4 @@
+'use client';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { LatLngExpression } from 'leaflet';
 import { Country } from '@/types';
@@ -12,7 +13,7 @@ type MapsProps = {
 }
 
 const Maps = ({ countries }: MapsProps) => {
-
+    
     const IconLeaflet = iconMarket.icon({
         iconUrl: iconUrl.src,
         iconRetinaUrl: iconRetinaUrl.src,
